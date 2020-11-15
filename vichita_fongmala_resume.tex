@@ -1,0 +1,191 @@
+%-------------------------
+% Resume in Latex
+% Author : Vichita Fongmala
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://www.linkedin.com/in/vfongmala/}{\Large Vichita Fongmala}} & Email : \href{mailto:vichita.f@gmail.com}{vichita.f@gmail.com}\\
+  \href{https://www.linkedin.com/in/vfongmala/}{linkedin.com/in/vfongmala/} & Mobile : +66846674870 \\
+\end{tabular*}
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Agoda}{Bangkok, Thailand}
+      {Senior Software Engineer}{Feb. 2020 - Present}
+      \resumeItemListStart
+        \resumeItem{Agoda Application}
+          {Involved in features across an application. Including A/B testing, unit testing, integration testing, data tracking, and release an application.}
+        \resumeItem{Release Management Tool}
+          {Automate system to override human tasks related to releasing the applications to store for both Android and iOS.}
+        \resumeItem{Onboarding buddy}
+          {Guide and help new joiner during onboarding process.}
+      \resumeItemListEnd
+
+      \resumeSubSubheading
+       {Mobile Software Developer}{Mar. 2015 - Feb. 2020}
+       \resumeItemListStart
+          \resumeItem{Agoda Application}
+            {Involved in features across an application. Including A/B testing, unit testing, integration testing, data tracking.}
+          \resumeItem{Onboarding buddy}
+            {Guide and help new joiner during onboarding process.}
+
+       \resumeItemListEnd
+
+% --------Multiple Positions Heading------------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {MagicBox Asia}{Bangkok, Thailand}
+      {Android Developer}{Jan. 2014 - Feb. 2015}
+      \resumeItemListStart
+        \resumeItem{MagicBox SDK}
+          {SDK for embed member systems into existing mobile games.}
+        \resumeItem{Mobile Game Localization}
+          {Localize foreign mobile games for into Thai. Config using Cocos2d-x framework, build, and release mobile games.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {AppMan}{Bangkok, Thailand}
+      {Mobile Application Developer}{Aug. 2013 - Dec 2013}
+      \resumeItemListStart
+        \resumeItem{Dating Application}
+          {Application which match users from their interests and create chat room to start conversation.}
+        \resumeItem{Insurance Application}
+          {Application for insurance agent. Allow customer to fill and submit the insurance form within application without using paper.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+%\section{Projects}
+%  \resumeSubHeadingListStart
+%    \resumeSubItem{QuantSoftware Toolkit}
+%      {Open source python library for financial data analysis and machine learning for finance.}
+%    \resumeSubItem{Github Visualization}
+%      {Data Visualization of Git Log data using D3 to analyze project trends over time.}
+%    \resumeSubItem{Recommendation System}
+%      {Music and Movie recommender systems using collaborative filtering on public datasets.}
+%    \resumeSubItem{Mac Setup}
+%      {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+%  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{Languages}{: Java, Kotlin, XML}
+    }
+    \item{
+      \textbf{Technologies}{: Android, Git, BPMN, RESTful API}
+    }
+  \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {KMUTT}{Bangkok, Thailand}
+      {Bachelor of Science in Computer Science;  GPA: 3.53}{May. 2009 -- Feb. 2013}
+    \resumeSubheading
+      {Inje University}{Gimhae, South Korea}
+      {Exchange study on Computer Engineer}{Mar. 2013 -- June. 2013}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+
+\end{document}
