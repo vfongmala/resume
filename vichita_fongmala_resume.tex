@@ -16,8 +16,11 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage{tabularx}
-\usepackage{glyphtounicode}
+\usepackage[protrusion=true,expansion=true,tracking=true]{microtype}
+\input{glyphtounicode}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -45,12 +48,15 @@
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
+% Make bold text visually tighter (narrower) without changing content
+\microtypesetup{expansion=alltext}
+\SetTracking{ encoding = *, shape = bfseries }{ -5 }
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+    \textbf{#1}{: #2 \vspace{-4pt}}
   }
 }
 
@@ -73,9 +79,12 @@
 \renewcommand{\labelitemii}{$\circ$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-4pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-8pt}}
+\newcommand{\resumePlainItem}[1]{\item\small{#1 \vspace{-4pt}}}
+\newcommand{\resumeTightListStart}{\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeTightListEnd}{\end{itemize}\vspace{-6pt}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -90,66 +99,70 @@
 \end{tabular*}
 
 \section{Summary}
-{Experienced in Android application development on multiple millions download applications including code optimisation, source and version control, store publishing and working with cross-functional team. Led project resulting 70\% decrease on manual steps to release application to stores.}
+{Highly experienced \textbf{Android Engineer} specializing in developing and optimizing high-scale applications (multiple millions of downloads). Proven ability to lead feature development, enforce engineering standards, and drive efficiency improvements. Successfully led a project that \textbf{reduced manual application release steps by 70\%}. Expertise in the full Android lifecycle, including CI/CD, A/B testing, data tracking, and store publishing.}
 %-----------EXPERIENCE-----------------
 \section{Experiences}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-    {WooliesX}{Sydney, Australia}
-    {Senior Software Engineer}{Jan. 2024 - Present}
+    {Leonardo.AI}{Sydney, Australia}
+    {Software Engineer}{May. 2025 -- Present}
     \resumeItemListStart
-      \resumeItem{Woolworths Application}
-        {Developed features of application. Led the team in the ``Proof of delivery" and ``Product substitution" feature development. Including A/B testing, unit testing, integration testing, data tracking, and release an application.}
-      \resumeItem{Mentoring}
-        {Guided and helped junior developer on Android development upskilling.}
-      \resumeItem{Onboarding buddy}
-        {Guided and helped new joiner during onboarding process.}
+      \resumePlainItem{\textbf{Implemented} core Android features enabling high-performance rendering of AI-generated content.}
+      \resumePlainItem{\textbf{Led} feature improvements and architectural enhancements on Android.}
+      \resumePlainItem{\textbf{Streamlined} knowledge transfer via improved technical documentation.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {Woolies X}{Sydney, Australia}
+    {Senior Software Engineer}{Jan. 2024 -- May. 2025}
+    \resumeItemListStart
+      \resumePlainItem{\textbf{Led} end-to-end development of critical features, including \textbf{"Proof of Delivery"} and \textbf{"Product Substitution"}, delivering high-quality releases for a large-scale consumer application.}
+      \resumePlainItem{Implemented features with \textbf{A/B testing}, robust \textbf{unit/integration testing}, and comprehensive \textbf{analytics} tracking.}
+      \resumePlainItem{Actively \textbf{mentored} junior developers in modern Android best practices and guided new joiners through onboarding.}
     \resumeItemListEnd
 
     \resumeSubheading
     {SafetyCulture}{Sydney, Australia}
-    {Senior Software Engineer}{Jun. 2022 - Dec. 2023}
+    {Senior Software Engineer}{Jun. 2022 -- Dec. 2023}
     \resumeItemListStart
-      \resumeItem{SafetyCulture Application}
-        {Developed features of application. Led the team in the ``Folder on mobile" feature development. Integrated Android application with external bluetooth devices. Including A/B testing, unit testing, integration testing, data tracking, and release an application.}
-%      \resumeItem{Project Leading}
-%        {Led the team in building the new tool to improve engineering productivity.}
+      \resumePlainItem{\textbf{Spearheaded} the development and release of the \textbf{"Folder on Mobile"} feature across the Safety Culture application.}
+      \resumePlainItem{Successfully \textbf{integrated} the Android application with external \textbf{Bluetooth devices}, managing full development, testing, and release.}
+      \resumePlainItem{Delivered features with \textbf{A/B testing}, \textbf{unit/integration testing}, and \textbf{data tracking} for performance analysis.}
     \resumeItemListEnd
 
     \resumeSubheading
       {Willow Inc.}{Sydney, Australia (Remote)}
-      {Senior Software Engineer}{Mar. 2021 - Mar. 2022}
+      {Senior Software Engineer}{Mar. 2021 -- Mar. 2022}
       \resumeItemListStart
-        \resumeItem{Willow Rail Application and Insite Application}
-          {Developed features of application. Implemented automation test from the ground up and integrated into Azure DevOps pipeline for both Android and iOS.}
-        \resumeItemListEnd
-
-    \resumeSubheading
-      {Agoda}{Bangkok, Thailand}
-      {Senior Software Engineer}{Feb. 2020 - Mar. 2021}
-%      \resumeItemListStart
-%        \resumeItem{Agoda Application}
-%          {Developed features of application. Including A/B testing, unit testing, integration testing, data tracking, and release an application.}
-%        \resumeItem{Onboarding buddy}
-%          {Guided and helping new joiner during onboarding process.}
-%      \resumeItemListEnd
-
-    \resumeSubSubheading
-      {Mobile Software Developer}{Mar. 2015 - Feb. 2020}
-      \resumeItemListStart
-        \resumeItem{Release Management Tool}
-          {Developed an automation system to override human tasks related to releasing the applications to store for both Android and iOS.}
-        \resumeItem{Agoda Application}
-          {Developed features of application. Including A/B testing, unit testing, integration testing, data tracking, and release an application.}
-        \resumeItem{Onboarding buddy}
-          {Guided and helped new joiner during onboarding process.}
-
+        \resumePlainItem{Developed complex features for the \textbf{Willow Rail} and \textbf{Insite} applications.}
+        \resumePlainItem{\textbf{Implemented automated testing frameworks} from scratch and integrated into the CI/CD pipeline for Android and iOS, improving release reliability.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Other experiences (Available upon request)}{Bangkok, Thailand}
-      {Android Developer}{Aug. 2013 - Feb. 2015}
+      {Agoda}{Bangkok, Thailand}
+      {Senior Software Engineer}{Feb. 2020 -- Mar. 2021}
+      \resumeItemListStart
+        \resumePlainItem{\textbf{Engineered an automation system (Release Management Tool)} that streamlined application release to the store for Android and iOS, overriding manual tasks and achieving a \textbf{70\%} decrease in manual steps.}
+        \resumePlainItem{Contributed to core feature development, including \textbf{A/B testing} and comprehensive \textbf{unit/integration testing}.}
+        \resumePlainItem{\textit{Previous Role: Mobile Software Developer (Mar. 2015 – Feb. 2020\)}}
+      \resumeItemListEnd
+
+    % \resumeSubSubheading
+    %   {Mobile Software Developer}{Mar. 2015 - Feb. 2020}
+    %   \resumeItemListStart
+    %     \resumeItem{Release Management Tool}
+    %       {Developed an automation system to override human tasks related to releasing the applications to store for both Android and iOS.}
+    %     \resumeItem{Agoda Application}
+    %       {Developed features of application. Including A/B testing, unit testing, integration testing, data tracking, and release an application.}
+    %     \resumeItem{Onboarding buddy}
+    %       {Guided and helped new joiner during onboarding process.}
+
+      \resumeItemListEnd
+
+    % \resumeSubheading
+    %   {Other experiences (Available upon request)}{Bangkok, Thailand}
+    %   {Android Developer}{Aug. 2013 - Feb. 2015}
 
 %--------
 %    \resumeSubheading
@@ -188,18 +201,13 @@
 
 
 %--------PROGRAMMING SKILLS------------
-\section{Programming Skills}
-  \resumeSubHeadingListStart
-    \item{
-      \textbf{Languages}{: Kotlin, Java, C\#, C++, Swift}
-    }
-    \item{
-      \textbf{Android Technologies}{: Koin, Dagger, Jetpack Compose, Coroutines, RxJava, Retrofit, JUnit, Espresso, MVVM, MVP, Play Store Publish}
-    }
-    \item{
-      \textbf{Other Technologies}{: CI/CD (Azure DevOps, TeamCity, Buildkite, CircleCI), Firebase, Microsoft AppCenter, Git, Appium, iOS, RESTful API, GraphQL, Agile}
-    }
-  \resumeSubHeadingListEnd
+\section{Technical Skills}
+  \resumeTightListStart
+    \item{\textbf{Languages}{: \textbf{Kotlin}, Java, Swift, C\#}}
+    \item{\textbf{Android}{: \textbf{Jetpack Compose}, Coroutines, Koin, Dagger, Retrofit, MVVM, MVP, Play Store Publish}}
+    \item{\textbf{Testing}{: JUnit, Espresso, A/B Testing, Integration/Unit Testing}}
+    \item{\textbf{DevOps/Tools}{: CI/CD (Azure DevOps, TeamCity, Buildkite, CircleCI), Git, RESTful API, GraphQL}}
+  \resumeTightListEnd
 
 %-----------EDUCATION-----------------
 \section{Education}
